@@ -20,26 +20,16 @@ describe('home page', () => {
       .contains("CATEGORIES")
 
     // Then: We expect Phones, Laptops, Monitors
-    // cy.get(".list-group-item")
-    //   .should("exist")
-    //   .contains("Phones")
-    myFunction("Phones")
+    cy.get(".list-group-item").eq(1)
+      .should("exist")
+      .contains("Phones")
 
-    //   cy.get(".list-group-item")
-    //   .should("exist")
-    //   .contains("Laptops")
-    myFunction("Laptops")
+      cy.get(".list-group-item").eq(2)
+      .should("exist")
+      .contains("Laptops")
 
-    //   cy.get(".list-group-item")
-    //   .should("exist")
-    //   .contains("Monitors")
-    myFunction("Monitors")
+      cy.get(".list-group-item").eq(3)
+      .should("exist")
+      .contains("Monitors")
   })
-
-  function myFunction(cat) {
-    cy.get(".list-group-item")
-    .should("exist")
-    .contains(cat)
-    return
-  }
 })
